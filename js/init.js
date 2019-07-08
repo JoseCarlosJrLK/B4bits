@@ -11,9 +11,12 @@ function send(){
 
     try{
         if(isNaN(ctt.fone)) throw "Somente numeros no campo Telefones";
+        if(ctt.fone.lenght == 12) throw "Digite no padrão 0xx9xxxxxxxx";
+        if(ctt.fone.lenght == 11) throw "Digite no padrão 0xx3xxxxxxx";
+
     }catch(erro){
     alert("Erro: "+erro);
-}finally{
-    alert(ctt);
-}
+    }finally{
+        alert(ctt);
+    }
 }

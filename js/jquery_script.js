@@ -1,0 +1,10 @@
+$(function(){
+     $('body').show(function(){
+         $(function(){
+             $("#conteudo").load("base.html");
+         });
+         $(function(){
+             $("footer").load("footer.html");
+         });
+     })
+});

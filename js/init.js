@@ -20,3 +20,43 @@ function send(){
         alert(ctt);
     }
 }
+
+function preenche(){
+
+    var txt = [
+        "Mapeamento da Rede",
+        "Segurança de Rede",
+        "Configuração de Roteamento para VPN",
+        "Implantação de Firewall",
+        "Criação da políticas de Segurança",
+        "Implantação de Proxy",
+        "Sistema de Arquivos em Cloud",
+        "Autenticação de Usuário",
+        "Migração de Serviços Locais para Cloud",
+        "Implantação de Serviço de Voip",
+        "Monitoramento da infraestrutura",
+        "Backup Cloud",
+        "Disaster Recovery"
+    ];
+    for (var i = 0; i < 13; i++) {
+        var img = document.createElement("IMG");
+        img.src = "static/img/servicos-pb/tumb-pb-"+i.toString()+".png";
+        img.classList.add("rounded", "mx-auto", "d-block", "img-thumbnail");
+        img.addEvent("onmouseover", revelar());
+
+        var p = document.createElement("p");
+        p.setAttribute("id", "base-img" );
+        p.appendChild(document.createTextNode(txt[i]));
+
+        var servico = document.getElementById('servico-'+i.toString());
+
+        servico.appendChild(img);
+        servico.appendChild(p);
+    }
+
+
+}
+
+function revelar(){
+    alert("Top");
+}
